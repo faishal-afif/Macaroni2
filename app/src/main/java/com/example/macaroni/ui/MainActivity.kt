@@ -25,7 +25,7 @@ class MainActivity : BaseSearchActivity() {
             }
         }
     }
-
+ //
     @SuppressLint("CheckResult")
     override fun onStart() {
         super.onStart()
