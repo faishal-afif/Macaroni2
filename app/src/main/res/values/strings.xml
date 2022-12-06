@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Macaroni Cuck</string>
+    <string name="sample_note_title">Makaroni</string>
+    <string name="sample_note_price">Rp10.000</string>
+    <string name="sample_note_description">Siapa yang gak tahu makanan ringan favorite masa kini. Makakan Makaroni kering ini digemari anak-anak dan orang dewasa. Macaroni Cuck menyajikan makaroni dengan bumbu rumahan yang lezat. Dan pastinya makaroni ini fresh karena produk homemade yang setiap harinya akan dihidangkan dengan fresh.</string>
+
+    <string name="title">Judul</string>
+    <string name="price">Harga</string>
+    <string name="description">Deskripsi</string>
+
+    <string name="search">SEARCH</string>
+</resources>
