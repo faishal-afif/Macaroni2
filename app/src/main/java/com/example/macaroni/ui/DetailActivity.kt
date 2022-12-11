@@ -10,9 +10,9 @@ class DetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailBinding
 
     companion object {
-        const val EXTRA_ID = "extra_id"
+        const val EXTRA_ID = "EXTRA_ID"
     }
-
+ //
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailBinding.inflate(layoutInflater)

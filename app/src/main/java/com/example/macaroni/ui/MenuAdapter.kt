@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.macaroni.R
 import com.example.macaroni.database.Menu
-import com.example.macaroni.databinding.ItemListNoteBinding
+import com.example.macaroni.databinding.ItemListMenuBinding
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import kotlinx.android.synthetic.main.item_list_menu.view.*
 
@@ -15,13 +15,13 @@ class MenuAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private val notes = arrayListOf<Menu>()
 
-    inner class NoteViewHolder(private val view: ItemListNoteBinding): RecyclerView.ViewHolder(view.root) {
-        fun bind(note: Menu) {
-            view.tvTitle.text = note.title
-            view.tvPrice.text = note.price
+    inner class MenuViewHolder(private val view: ItemListMenuBinding): RecyclerView.ViewHolder(view.root) {
+        fun bind(menu: Menu) {
+            view.tvItemName.text = menu.title
+            view.tvItemDescription.text = menu.price
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context, DetailActivity::class.java)
-                intent.putExtra(DetailActivity.EXTRA_ID, note.id)
+                intent.putExtra(DetailActivity.EXTRA_ID, menu.id)
                 itemView.context.startActivity(intent)
             }
         }
@@ -50,8 +50,8 @@ class MenuAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_list_menu, parent, false))
-        val view = ItemListNoteBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return NoteViewHolder(view)
+        val view = ItemListMenuBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return MenuViewHolder(view)
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
