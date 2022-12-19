@@ -45,6 +45,7 @@ class MenuAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val menu = menus[position]
         holder.itemView.tv_item_name.text = menu.title
+        holder.itemView.tv_item_description.text = menu.price
         // holder.itemView.imageFavorite.isChecked = cheese.favorite == 1
     }
 
